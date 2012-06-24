@@ -164,7 +164,7 @@
 		  <p>It is possible to disable the JTAG/SWD interface on the LPC1xxx processors from software. It is also possible to program the PLL wrong so that the processor hangs. If this happens, it can be impossible to communicate with the processor via the JTAG/SWD interface. The reason for this is that the application program in flash starts executing immediately after reset. A JTAG/SWD pod normally takes some time to start connecting to the processor. During this initial connection phase, the application program inside the processor can disable the JTAG/SWD interface or hangs the PLL. The internal flash must be erased to solve this situation. Pull the ISP enable signal low when powering the board. This signal is named "PIO0_1" for LPC11xx/13xx.</p>
 		  <p>Immediately connect the processor UART/USB channel to the ISP program (for example FlashMagic). Erase flash from inside the ISP program. This procedure ensures that the application program in internal flash never executes on the processor after powerup. Also make sure to actually power cycle the processor before entering ISP mode. A warm reset does not always reset the PLL to a known state after reset. Therefore a cold reset is needed, i.e., cycle the power.</p>
 		</div>
-		<h4><a hef="#">• Are your OEM boards EMC tested/certified?</a></h4>
+		<h4><a hef="#">• Are your boards EMC tested/certified?</a></h4>
 		<div>
 		  <p>USBug boards have not been EMC tested individually since these are components. EMC test (and CE marking) is only done on final products and the result very much depends on the environment into which it is integrated to.</p>
 		</div>
