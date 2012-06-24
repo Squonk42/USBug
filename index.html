@@ -30,14 +30,14 @@
         <img style="border: 0; box-shadow: 0 0 0; width: 887px; height:850px" src="images/Progression800.png">
         <h3>Device Overview</h3>
 	<p>The USBug is a complete USB-based microcontroller development system in a very small footprint.</p>
-	<p>All programming is done via the USB port. No special programmer is needed, only a standard “Mini-B” USB cable and a Windows/Linux PC or a Macintosh with a USB port are required.</p>
+	<p>Programming is done via the USB port. No special programmer device is needed, only a standard “Mini-B” USB cable and a Windows/Linux PC or a Macintosh host computer with a USB port are required.</p>
 	<h3>Key Features:</h3>
 	<p><ul>
 	    <li>Fully Open-Source Hardware &amp; Software (CC-BY-SA, GPL)</li>
-	    <li>Drag &amp; Drop firmware, just use it as an USB Memory Stick!</li>
-	    <li>No Loader application, the bootloader resides in ROM (unereasable)</li>
+	    <li>Drag &amp; Drop firmware: just use it as an USB Memory Stick!</li>
+	    <li>No Loader application, the bootloader resides in ROM (unereasable and does not require precious Flash space)</li>
 	    <li>Works with Mac OS X, Linux & Windows</li>
-	    <li>Standard ARM SWD debug/trace connector</li>
+	    <li>SWD/JTAG connector (0.5 mil/1.27 mm pitch, standard SWD/JTAG connector)</li>
 	    <li>NXP's LPC ARM Cortex M0/M3 32-bit processor:
 	      <ul>
 		<li>LQFP 48 pin package</li>
@@ -59,6 +59,8 @@
 	    <li>Available with pins for solderless breadboard</li>
 	    <li>Very low cost</li>
 	</p>
+
+	<!-- ACCORDION -->
         <div id="accordion">  
           <h3><span class="ui-icon
           ui-icon-triangle-1-e"></span><a href="#">Documentation &amp; Resources</a></h3>
@@ -147,9 +149,11 @@
 		<div>
 		  <p>The board itself does not have a serial number printed on it. However, the CPU provides both a Part ID and a Unique ID through either ISP ("In-circuit Serial Programming") or IAP ("In-Application Programming").</p>
 		</div>
-		<h4><a hef="#">• Do you have high resolution photos of your products?</a></h4>
+		<h4><a hef="#">• Do you have high resolution pictures of your products?</a></h4>
 		<div>
-		  <p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
+		  <p>As a fully "Open Hardware" project, all design
+		  documents are made available in
+		  the <a href="https://github.com/Squonk42/USBug/tree/master/eagleUp">eagleUp USBug Github repository</a>, as well as corresponding Sketchup 3D models and Kerkithea render files.</p>
 		</div>
 		<h4><a hef="#">• Do you have a long-term commitment to production and availability of your boards?</a></h4>
 		<div>
