@@ -72,54 +72,170 @@
           </div>
 	  <h3>
 	    <span class="ui-icon
-	    ui-icon-triangle-1-e"></span><a href="#">Specification</a>
+	    ui-icon-triangle-1-e"></span><a href="#">CPU Variants</a>
 	  </h3>
           <div>
 	    <h3>NXP's LPC USB ARM Cortex M0/M3 Microcontroller Breakout Board</h3>
-	    <table border="0" cellpadding="5" cellspacing="0">
-	      <tbody>
-		<tr>
-		  <td valign="top" width="100"><i>Processor</i></td>
-		  <td>NXP's Cortex M0/M3 LPC1xxx microcontroller in 48-pin LQFP package.</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Program Flash</i></td>
-		  <td>32 KB</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Data Memory</i></td>
-		  <td>8 KB</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Clock Crystals</i></td>
-		  <td>12.000 MHz crystal for maximum execution speed and standard serial bit rates, including USB requirements. The LPC1343 runs at frequencies up to 72 MHz.</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Interfaces / Connectors</i></td>
-		  <td>• All LPC1343 I/O pins are available on edge expansion connectors, in DIL-30 structure suitable for bread board prototyping (dual 15 pos, 100 mil/2.54 mm pitch rows, 700 mil/17.78 mm apart).<br />  • On-board USB Device interface, with mini-B USB connector and proper ESD protection.</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Dimensions</i></td>
-		  <td>21 x 40 mm</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Power</i></td>
-		  <td>Flexible powering, with on-board 150mA 3.3V voltage regulator (can be powered from USB connector or an external +5V supply).</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Connectors</i></td>
-		  <td>• All LPC1343 I/O pins are available on connectors.<br />  • mini-B USB connector.<br />
-		      • SWD/JTAG connector (0 mil/1.27 mm pitch, standard SWD/JTAG connector).</td>
-		</tr>
-		<tr>
-		  <td valign="top"><i>Other</i></td>
-		  <td>• 32 Kbit I2C E2PROM for storing non-volatile parameters.<br />
-		    • Onboard reset generation and reset push-button.<br />
-		    • Push-button for enabling Bootloader mode of the LPC1343.<br />
-		    • LED on pin PIO0_7.<br />  • <b>2 pcs 1x15 pinlists included</b>, but not soldered.
-		  </td>
-		</tr>
-	      </tbody>
+	    <table id="cpu" border="0" cellpadding="5" cellspacing="0">
+	      <col>
+	      <col>
+	      <col span="7">
+	      <tr>
+		<td colspan="2">Function</td>
+		<td>LPC11U23</td>
+		<td>LPC11U24</td>
+		<td>LPC1342</td>
+		<td>LPC1343</td>
+		<td>LPC1345</td>
+		<td>LPC1346</td>
+		<td>LPC1347</td>
+	      </tr>
+	      <tr>
+		<td rowspan="5" class="subsystem">Core</td>
+		<td>CPU</td>
+		<td colspan="2">ARM Cortex-M0 r0p0</td>
+		<td colspan="2">ARM Cortex-M3 r2p0</td>
+		<td colspan="3">ARM Cortex-M3 r2p1</td>
+	      </tr>
+	      <tr>
+		<td>Processor Speed</td>
+		<td colspan="2">50 MHz</td>
+		<td colspan="5">72 MHz</td>
+	      </tr>
+	      <tr>
+		<td>SysTick Timer</td>
+		<td colspan="7">1</td>
+	      </tr>
+	      <tr>
+		<td>Bit-banding</td>
+		<td colspan="2">-</td>
+		<td>yes</td>
+		<td>yes</td>
+		<td colspan="3">-</td>
+	      </tr>
+	      <tr>
+		<td>Memory Protection Unit</td>
+		<td colspan="2">-</td>
+		<td>yes</td>
+		<td>yes</td>
+		<td colspan="3">-</td>
+	      </tr>
+	      <tr>
+		<td rowspan="4" class="subsystem">Memory</td>
+		<td>Flash</td>
+		<td>24 kB</td>
+		<td>32 kB</td>
+		<td>16 kB</td>
+		<td>32 kB</td>
+		<td>32 kB</td>
+		<td>48 kB</td>
+		<td>64 kB</td>
+	      </tr>
+	      <tr>
+		<td>SRAM</td>
+		<td colspan="2">6/8+2 kB</td>
+		<td>4 kB</td>
+		<td>8 kB</td>
+		<td colspan="2">8+2 kB</td>
+		<td>8+2+2 kB</td>
+	      </tr>
+	      <tr>
+		<td>ROM</td>
+		<td colspan="7">16 kB</td>
+	      </tr>
+	      <tr>
+		<td>EEPROM</td>
+		<td>1 kB</td>
+		<td>2/4 kB</td>
+		<td colspan="2">-</td>
+		<td>2 kB</td>
+		<td colspan="2">4 kB</td>
+	      </tr>
+	      <tr>
+		<td rowspan="2" class="subsystem">GPIOs</td>
+		<td>GPIO Blocks</td>
+		<td colspan="2">2*32 pins</td>
+		<td colspan="2">4*12 pins</td>
+		<td colspan="3">2*32 pins</td>
+	      </tr>
+	      <tr>
+		<td>I/O Pins</td>
+		<td colspan="7">40</td>
+	      </tr>
+	      <tr>
+		<td></td>
+		<td>Wakeup from Deep-Sleep/Power-Down</td>
+		<td colspan="2">GPIO, WDT, USB</td>
+		<td colspan="2">GPIO, WDT Oscillator</td>
+		<td colspan="3">GPIO, WDT, USB</td>
+	      </tr>
+	      <tr>
+		<td rowspan="4" class="subsystem">Timers</td>
+		<td>32-bit Timer Blocks</td>
+		<td colspan="7">2</td>
+	      </tr>
+	      <tr>
+		<td>16-bit Timer Blocks</td>
+		<td colspan="7">2</td>
+	      </tr>
+	      <tr>
+		<td>Watchog Timer Blocks</td>
+		<td colspan="2">1 (Windowed)</td>
+		<td colspan="2">1</td>
+		<td colspan="3">1 (Windowed)</td>
+	      </tr>
+	      <tr>
+		<td>PWM Channels</td>
+		<td colspan="7">11</td>
+	      </tr>
+	      <tr>
+		<td rowspan="3" class="subsystem">Serial
+		  Interfaces</td>
+		<td>UART Blocks</td>
+		<td colspan="7">1</td>
+	      </tr>
+	      <tr>
+		<td>I2C Blocks</td>
+		<td colspan="7">1</td>
+	      </tr>
+	      <tr>
+		<td>SSP/SPI Blocks</td>
+		<td colspan="2">2</td>
+		<td colspan="2">1</td>
+		<td colspan="3">2</td>
+	      </tr>
+	      <tr>
+		<td rowspan="2" class="subsystem">USB
+		  Interface</td>
+		<td>USB Blocks</td>
+		<td colspan="7">1 USB 2.0 FS Device + PHY</td>
+	      </tr>
+	      <tr>
+		<td>USB ROM-based drivers</td>
+		<td colspan="2">HID, MSC, CDC</td>
+		<td colspan="2">HID, MSC</td>
+		<td colspan="3">HID, MSC, CDC, FDU</td>
+	      </tr>
+	      <tr>
+		<td class="subsystem">Analog</td>
+		<td>ADC Channels/Resolution</td>
+		<td colspan="4">8*10-bit, 400 kSamples/s</td>
+		<td colspan="3">8*12-bit, 500 kSamples/s</td>
+	      </tr>
+	      <tr>
+		<td class="subsystem">Debug</td>
+		<td>Debug Interfaces</td>
+		<td colspan="2">JTAG/SWD</td>
+		<td colspan="2">SWD</td>
+		<td colspan="3">JTAG/SWD</td>
+	      </tr>
+	      <tr>
+		<td class="subsystem"></td>
+		<td>Packages</td>
+		<td colspan="2">QFP64, QFP48, QFN33</td>
+		<td colspan="2">QFP48,QFN33</td>
+		<td colspan="3">QFP64, QFP48, QFN33</td>
+	      </tr>
 	    </table>
           </div><h3><span class="ui-icon
           ui-icon-triangle-1-e"></span><a href="#">FAQ</a></h3>

@@ -143,6 +143,21 @@ footer {
   font-family: Arial, Helvetica, Sans;
 }
 
+#cpu tr td {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.subsystem {
+  background-color: #f2f2f2;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  font-weight: 700;
+}
+
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/

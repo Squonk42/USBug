@@ -8,4 +8,8 @@ $(function() {
 	$(this).next().toggle();
 	return false;
     }).next().hide();
+    $('#cpu tr:odd').css({backgroundColor: '#ccc'});
+    $("#cpu tr:last").css("border-bottom", "1px solid");
+    $("#cpu tr:first").css("border", "1px solid");
+    $("#cpu tr:first").css("font-weight", "700");
 });
