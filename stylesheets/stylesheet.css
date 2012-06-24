@@ -5,6 +5,29 @@ by Jason Costello, @jsncostello
 
 @import url(pygment_trac.css);
 
+.ui-accordion .ui-accordion-header {
+  display: block;
+  height: 34px;
+  background: 
+  #CE2F1B;
+  background: -webkit-gradient(linear,left top,left bottom,from(
+  #A1372A),to(
+  #CE2F1B));
+  background: -moz-linear-gradient(top,
+  #A1372A,
+  #CE2F1B);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#a1372a,endColorstr=#ce2f1b);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#a1372a,endColorstr=#ce2f1b)";
+  border-bottom: 1px solid 
+  white;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: 
+  white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
 /*******************************************************************************
 MeyerWeb Reset
 *******************************************************************************/
