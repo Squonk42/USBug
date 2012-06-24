@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="USBug : NXP's LPC USB ARM Cortex M0/M3 Microcontroller Breakout Board" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script> 
+    <meta charset='utf-8' /> <meta http-equiv="X-UA-Compatible" content="chrome=1" /> <meta name="description" content="USBug : NXP's LPC USB ARM Cortex M0/M3 Microcontroller Breakout Board" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="javascripts/main.js"> </script>
-    <link type="text/css" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.5/themes/black-tie/jquery-ui.css" rel="Stylesheet" />
+    <script type="text/javascript" src="javascripts/main.js"> </script> <link type="text/css" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.5/themes/black-tie/jquery-ui.css" rel="Stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
     <title>USBug</title>
   </head>
-
   <body>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/Squonk42/USBug">View on GitHub</a>
-
           <h1 id="project_title">USBug</h1>
           <h2 id="project_tagline">NXP's LPC USB ARM Cortex M0/M3 Microcontroller Breakout Board</h2>
-
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/Squonk42/USBug/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/Squonk42/USBug/tarball/master">Download this project as a tar.gz file</a>
@@ -34,64 +26,177 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <img style="border: 0; box-shadow: 0 0 0" src="images/Progression800.png">
+	<div class="credo">"From idea to fulfillment."</div>
+        <img style="border: 0; box-shadow: 0 0 0; width: 887px; height:850px" src="images/Progression800.png">
         <h3>Device Overview</h3>
-
-<p>The USBug is a complete USB-based microcontroller development system in a very small footprint.</p>
-
-<p>All programming is done via the USB port. No special programmer is needed, only a standard “Mini-B” USB cable and a Windows/Linux PC or a Macintosh with a USB port are required.</p>
-
-<h3>Key Features:</h3>
-
-<p><ul>
-  <li>Fully Open-Source Hardware &amp; Software (CC-BY-SA, GPL)</li>
-  <li>Drag &amp; Drop firmware, just use it as an USB Memory Stick!</li>
-  <li>No Loader application, the bootloader resides in ROM (unereasable)</li>
-  <li>Works with Mac OS X, Linux & Windows</li>
-  <li>Standard ARM SWD debug/trace connector</li>
-  <li>ARM "Cortex M3" 32-bit processor, up to 72 MHz, up to 64 kB Flash, up to 10 kB SRAM</li>
-  <li>Up to 42 GPIO pins, 1&times;USB device, 1&times;UART, 1&times;I2C, 1&times;SPI interfaces</li>
-  <li>2×32-bit, 2&times;16-bit, 1&times;Watchdog timers</li>
-  <li>10 Bit ADC with up to 8 inputs</li>
-  <li>Tiny size: 2" x 0.8" (50 mm &times; 20 mm), only 0.244" (6.2 mm) thick (w/o header pins)</li>
-  <li>Available with pins for solderless breadboard</li>
-  <li>Very low cost</li>
-</p>
-
+	<p>The USBug is a complete USB-based microcontroller development system in a very small footprint.</p>
+	<p>All programming is done via the USB port. No special programmer is needed, only a standard “Mini-B” USB cable and a Windows/Linux PC or a Macintosh with a USB port are required.</p>
+	<h3>Key Features:</h3>
+	<p><ul>
+	    <li>Fully Open-Source Hardware &amp; Software (CC-BY-SA, GPL)</li>
+	    <li>Drag &amp; Drop firmware, just use it as an USB Memory Stick!</li>
+	    <li>No Loader application, the bootloader resides in ROM (unereasable)</li>
+	    <li>Works with Mac OS X, Linux & Windows</li>
+	    <li>Standard ARM SWD debug/trace connector</li>
+	    <li>NXP's LPC ARM Cortex M0/M3 32-bit processor:
+	      <ul>
+		<li>LQFP 48 pin package</li>
+		<li>up to 72 MHz CPU frequency</li>
+		<li>up to 64 kB of Flash memory</li>
+		<li>up to 10 kB of SRAM memory</li>
+		<li>Up to 42 GPIO pins</li>
+		<li>1&times;USB device</li>
+		<li>1&times;UART</li>
+		<li>1&times;I<sup>2</sup>C</li>
+		<li>1&times;SPI interfaces</li>
+		<li>2×32-bit timer</li>
+		<li>2&times;16-bit timer</li>
+		<li>1&times;Watchdog timer</li>
+		<li>10 Bit ADC with up to 8 inputs</li>
+	      </ul>
+	    </li>
+	    <li>Tiny size: 50 mm &times; 20 mm (2" &times; 0.8"), only 6.2 mm (0.244"") thick (w/o header pins)</li>
+	    <li>Available with pins for solderless breadboard</li>
+	    <li>Very low cost</li>
+	</p>
         <div id="accordion">  
-            <h3><span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">Documentation &amp; Resources</a></h3>  
-            <div>
-              <p>
-                    As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</br>
-              </p>
-              <p>
-                    Make sure you also visit the corresponding <a href="https://github.com/Squonk42/USBug/wiki">Wiki</a> where you will find the most up-to-date information on the project.
-              </p>
-              <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in tortor metus, a aliquam dui. 
-                    Mauris euismod lorem eget nulla semper semper. Vestibulum pretium rhoncus cursus. Vestibulum rhoncus, 
-                    magna sit amet fermentum fringilla, nunc nisl pellentesque libero, nec commodo libero ipsum a tellus. 
-                    Maecenas sed varius est. Sed vel risus at nisi imperdiet sollicitudin eget ac orci. Duis ac tristique sem.
-                </p>
-              </div><h3><span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">Specification</a></h3>  
-            <div><p>Need a table here!</p>
-                <p>
-                    Aliquam pretium scelerisque nisl in malesuada. Proin dictum elementum rutrum. 
-                    Etiam eleifend massa id dui porta tincidunt. Integer sodales nisi nec ligula lacinia tincidunt vel in purus. 
-                    Mauris ultrices velit quis massa dignissim rhoncus. Proin posuere convallis euismod. 
-                    Vestibulum convallis sagittis arcu id faucibus. 
-                </p>
-            </div><h3><span class="ui-icon ui-icon-triangle-1-e"></span><a href="#">FAQ</a></h3>  
-            <div><p>Need a nested accordion!</p>
-                    Quisque quis magna id nibh laoreet condimentum a sed nisl. In hac habitasse platea dictumst. 
-                    Proin sem eros, dignissim sed consequat sit amet, interdum id ante. 
-                    Ut id nisi in ante fermentum accumsan vitae ut est. 
-                    Morbi tellus enim, convallis ac rutrum a, condimentum ut turpis. 
-                    Proin sit amet pretium felis.
+          <h3><span class="ui-icon
+          ui-icon-triangle-1-e"></span><a href="#">Documentation &amp; Resources</a></h3>
+          <div>
+            <p>As a fully "Open Hardware" project, all design documents are made available in
+            the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
+            <p>Make sure you also visit the corresponding <a href="https://github.com/Squonk42/USBug/wiki">Wiki</a>
+            where you will find the most up-to-date information on the project.</p>
           </div>
+	  <h3>
+	    <span class="ui-icon
+	    ui-icon-triangle-1-e"></span><a href="#">Specification</a>
+	  </h3>
+          <div>
+	    <h3>NXP's LPC USB ARM Cortex M0/M3 Microcontroller Breakout Board</h3>
+	    <table border="0" cellpadding="5" cellspacing="0">
+	      <tbody>
+		<tr>
+		  <td valign="top" width="100"><i>Processor</i></td>
+		  <td>NXP's Cortex M0/M3 LPC1xxx microcontroller in 48-pin LQFP package.</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Program Flash</i></td>
+		  <td>32 KB</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Data Memory</i></td>
+		  <td>8 KB</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Clock Crystals</i></td>
+		  <td>12.000 MHz crystal for maximum execution speed and standard serial bit rates, including USB requirements. The LPC1343 runs at frequencies up to 72 MHz.</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Interfaces / Connectors</i></td>
+		  <td>• All LPC1343 I/O pins are available on edge expansion connectors, in DIL-30 structure suitable for bread board prototyping (dual 15 pos, 100 mil/2.54 mm pitch rows, 700 mil/17.78 mm apart).<br />  • On-board USB Device interface, with mini-B USB connector and proper ESD protection.</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Dimensions</i></td>
+		  <td>21 x 40 mm</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Power</i></td>
+		  <td>Flexible powering, with on-board 150mA 3.3V voltage regulator (can be powered from USB connector or an external +5V supply).</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Connectors</i></td>
+		  <td>• All LPC1343 I/O pins are available on connectors.<br />  • mini-B USB connector.<br />
+		      • SWD/JTAG connector (0 mil/1.27 mm pitch, standard SWD/JTAG connector).</td>
+		</tr>
+		<tr>
+		  <td valign="top"><i>Other</i></td>
+		  <td>• 32 Kbit I2C E2PROM for storing non-volatile parameters.<br />
+		    • Onboard reset generation and reset push-button.<br />
+		    • Push-button for enabling Bootloader mode of the LPC1343.<br />
+		    • LED on pin PIO0_7.<br />  • <b>2 pcs 1x15 pinlists included</b>, but not soldered.
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+          </div><h3><span class="ui-icon
+          ui-icon-triangle-1-e"></span><a href="#">FAQ</a></h3>
+          <div>
+      	    <div id="faq">
+	      <h4><a hef="#">• How do I get the schematic?</a></h4>
+	      <div>
+		<p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
+	      </div>
+		<h4><a hef="#">• Are your boards RoHS compatible?</a></h4>
+		<div>
+		  <p>Yes, the USBug board are designed to use RoHS-compatible components. However, you should also use RoHS PCB and solder to be fully compliant.</p>
+		</div>
+		<h4><a hef="#">• What chip revision are your boards using?</a></h4>
+		<div>
+		  <p>The USBug board is designed to work with all NXP LPC LQFP48 packaged chips and do not depend on a specific chip revision. Although these chips are all pin-to-pin compatible, you should check for programming specificities and chip errata.</p>
+		</div>
+		<h4><a hef="#">• Are the design files available (schematic, layout, BOM and Gerber files)?</a></h4>
+		<div>
+		  <p>Yes! As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
+		</div>
+		<h4><a hef="#">• What is the warranty for your boards?</a></h4>
+		<div><p> AS A FULLY "OPEN HARDWARE" PROJECT, THERE IS NO WARRANTY FOR THE PRODUCT, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PRODUCT “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PRODUCT IS WITH YOU. SHOULD THE PRODUCT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.</p>
+		  <p>IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PRODUCT AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PRODUCT (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PRODUCT TO OPERATE WITH ANY OTHER PRODUCTS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+		</div>
+		<h4><a hef="#">• Where is the serial number?</a></h4>
+		<div>
+		  <p>The board itself does not have a serial number printed on it. However, the CPU provides both a Part ID and a Unique ID through either ISP ("In-circuit Serial Programming") or IAP ("In-Application Programming").</p>
+		</div>
+		<h4><a hef="#">• Do you have high resolution photos of your products?</a></h4>
+		<div>
+		  <p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
+		</div>
+		<h4><a hef="#">• Do you have a long-term commitment to production and availability of your boards?</a></h4>
+		<div>
+		  <p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>. You are thus able to take all required measures yourself in order to obtain the desired availability.</p>
+		</div>
+		<h4><a hef="#">• I cannot download the manuals or files in general. What to do?</a></h4>
+		<div>
+		  <p>Sorry, can't help with this general problem, try a proven working browser!</p>
+		</div>
+		<h4><a hef="#">• How to erase flash on devices when JTAG/SWD interface accidentally disabled or PLL programmed wrongly by application program that is already in flash?</a></h4>
+		<div>
+		  <p>It is possible to disable the JTAG/SWD interface on the LPC1xxx processors from software. It is also possible to program the PLL wrong so that the processor hangs. If this happens, it can be impossible to communicate with the processor via the JTAG/SWD interface. The reason for this is that the application program in flash starts executing immediately after reset. A JTAG/SWD pod normally takes some time to start connecting to the processor. During this initial connection phase, the application program inside the processor can disable the JTAG/SWD interface or hangs the PLL. The internal flash must be erased to solve this situation. Pull the ISP enable signal low when powering the board. This signal is named "PIO0_1" for LPC11xx/13xx.</p>
+		  <p>Immediately connect the processor UART/USB channel to the ISP program (for example FlashMagic). Erase flash from inside the ISP program. This procedure ensures that the application program in internal flash never executes on the processor after powerup. Also make sure to actually power cycle the processor before entering ISP mode. A warm reset does not always reset the PLL to a known state after reset. Therefore a cold reset is needed, i.e., cycle the power.</p>
+		</div>
+		<h4><a hef="#">• Are your OEM boards EMC tested/certified?</a></h4>
+		<div>
+		  <p>USBug boards have not been EMC tested individually since these are components. EMC test (and CE marking) is only done on final products and the result very much depends on the environment into which it is integrated to.</p>
+		</div>
+		<h4><a hef="#">• Which free graphical libraries exist for NXP's processors?</a></h4>
+		<div>
+		  <p>microBuilder's <a href="http://www.microbuilder.eu/Projects/LPC1114ReferenceDesign/LPC1114CodeBase.aspx">LPC1114 Code Base software library</a> or <a href="http://www.microbuilder.eu/Projects/LPC1343ReferenceDesign/LPC1343CodeBase.aspx">LPC1343 Code Base software library</a> support all the main internal peripherals, and drivers for common hardware like I2C or SPI-based EEPROM. The code base includes complete C startup code and an easy to understand make file and linker script for building from the command-prompt on any OS (Yagarto 4.5.0 was used for builds), as well as project files for the open-source CodeLite C/C++ IDE and the commercial GCC-based Crossworks for ARM (useful for HW debugging).</p>
+		</div>
+		<h4><a hef="#">• What software development environment (IDE, compiler, debugger) is recommended for your boards?</a></h4>
+		<div>
+		  <p>USBug does not endorse or include a specific software development environment - sometimes also called IDE (Integrated Development Environment).</p>
+		  <p>We do however have good experience with the following products:</p>
+		  <ul>
+		    <li><a href="http://ics.nxp.com/lpcxpresso/" target="_blank">LPCXpresso IDE</a> - this is more than just a development environment. It is a concept with low-cost target boards with embedded JTAG/SWD interface on the development board. The LPCXpresso IDE is free and after registration it has a 128kByte limitation. Different upgrades exist to raise the code size limit or completely remove it. It is possible to use the embedded JTAG/SWD interface on the target boards as a JTAG/SWD interface for other boards than the LPCXpresso target boards. In effect, the JTAG/SWD interface hardware will cost only what an LPCXpresso board cost (around 20 EUR / 30 USD). We recommend to buy the LPC11C24, LPC1200 or LPC1769 LPCXpresso board for this since these are the simplest to use as independent JTAG/SWD interfaces.</li>
+		    <li><a href="http://www.keil.com/arm/mdk.asp" target="_blank">Keil - MDK/uVision</a>. There is an 'MDK-Lite (32KB code size limit) Edition' is available for <a href="https://www.keil.com/demo/eval/arm.htm" target="_blank">download</a>. Keil has a JTAG/SWD interface called <a href="/products/tools/tool_ulink2.php">ULINK2</a> which works great together with MDK/uVision.</li>
+<li><a href="http://www.code-red-tech.com/" target="_blank">Code Red - Red Suite</a>. Code Red is the supplier of the LPCXpresso IDE (and licensed to NXP) and Red Suite is their own, more versatile version of the development environment. Code Red has a JTAG/SWD interface called <a href="/products/tools/tool_cr_redprobe.php">Red Probe+</a>. Compare versions <a href="http://www.code-red-tech.com/products.php#comparison" target="_blank">here.</a></li>
+		    <li><a href="http://www.rowley.co.uk/" target="_blank">Rowley - CrossWorks</a> with the JTAG/SWD interface <i>CrossConnect</i>. There is a fully-functional version for 30 days evaluation.</li>
+		    <li><a href="http://www.iar.com/" target="_blank">IAR - Embedded Workbench</a></li>
+		  </ul>
+		  <p>There are other products/(open source)projects
+		  than listed above. These have however not been
+		  tested with USBug. The ones in the list above we have good experience from using.</p>
+		  <p>You can also use your favorite editor for editing, GCC for compiling and GDB for debugging. This setup require experience and knowledge.</p>
+		  <p>Note that most of our sample applications have been created either for the LPCXpresso IDE or Keil uVision. It is not a very big job to port project settings from one development environment to another, but you are then on your own to provide free support for.</p>
+		  <p>As for debugging, the use of a JTAG/SWD interface and a debugger integrated with the development environment is recommended. This setup gives the most powerful tool to start your program development.</p>
+		  <p>Each software development environment listed above has accompanying JTAG/SWD interfaces. <a href="http://www.segger.com" target="_blank">Segger</a> has a very versatile JTAG/SWD interface called <a href="http://www.segger.com/jlink.html" target="_blank">J-LINK</a>, which works with many development environments. However, always check with the development supplier of your choice before purchase if J-LINK is supported.</p>
+		  <p>Most (cheaper) JTAG/SWD interfaces connect to the development PC via the USB interface. Only more expensive interfaces support Ethernet interfaces.</p>
+		</div>
+	    </div>
+	  </div>
         </div>
-      </section>
     </div>
+    </section>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
@@ -100,8 +205,5 @@
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
-
   </body>
 </html>
