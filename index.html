@@ -77,11 +77,10 @@
           <div>
 	    <h3>NXP's LPC USB ARM Cortex M0/M3 Microcontrollers</h3>
 	    <p>Today, 32-bit microncontrollers are outperforming older 8-bit microcontrollers, both in terms of performance, but also in terms of price. Thanks to the ever finer silicon etching capabilities, it is now possible to put more transisors on the same surface, allowing for wider data paths and more complex architectures at a competitive price and comparable power consumption.</p>
-	    <p>Among all 32-bit architecture, ARM Ltd. has clearly one
-	    of the leading solution with its low-power "Cortex M"
-	    design. This very energy and size-efficient IP
-	    (Intellectual Property) has been integrated by most of the
-	    microcontroller manufacturers.</p>
+	    <p>Among all 32-bit architecture, ARM Ltd. has clearly one of the leading solution with its low-power "Cortex M" design. This very energy and size-efficient IP (Intellectual Property) has been adopted by most of the microcontroller manufacturers.</p>
+	    <p>But beside the CPU core itself, the microcontrollers implementing the ARM Cortex-M architecture also provide more sophisticatedd peripheral, compared to 8-bit units. Usually, a USB device is integrated in most mid-range devices, while USB host and Ethernet is only available on the higher-end devices.</p>
+	    <p>As a major semiconductor manufacturer, NXP has a large selection of ARM Cortex-M-based devices, among which the upper low-range <a href="http://www.nxp.com/products/microcontrollers/cortex_m0/lpc11u00/">LPC11Uxx</a> and mid-range <a href="http://www.nxp.com/products/microcontrollers/cortex_m3/lpc1300/">LPC13xx</a> devices integrates an USB device interface. But compared to other similar devices, these chips have a unique ROM-based MSC ("Mass Storage Class", aka. USB meory stick) USB bootloader, which is the main reason for choosing them for the USBug board.</p>
+	    <p>The second reason to choose these USB-èenabled LPCxxxx for the USBug is that the devices using the LQFP48 package are pin-to-pin compatible, so here are all the CPUs that are compatible with the USBug board:</p>
 	    <table id="cpu" border="0" cellpadding="5" cellspacing="0">
 	      <col>
 	      <col>
@@ -243,6 +242,7 @@
 		<td colspan="3">QFP64, QFP48, QFN33</td>
 	      </tr>
 	    </table>
+	    <p>Note however that although they ar epin-to-pin compatible and that they can be mounted using the same footprint, these devices may need different firmware to run, as they integrates different IPs (Intellectual Properties) for the CPU core itself, but also for some peripherals (GPIOs, Timers and USB device controller, among others).</p>
           </div><h3><span class="ui-icon
           ui-icon-triangle-1-e"></span><a href="#">FAQ</a></h3>
           <div>
