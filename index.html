@@ -4,7 +4,9 @@
     <meta charset='utf-8' /> <meta http-equiv="X-UA-Compatible" content="chrome=1" /> <meta name="description" content="USBug : NXP's LPC USB ARM Cortex M0/M3 Microcontroller Breakout Board" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="javascripts/main.js"> </script> <link type="text/css" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.5/themes/black-tie/jquery-ui.css" rel="Stylesheet" />
+    <script src="http://datatables.net/release-datatables/media/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+    <link type="text/css" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.5/themes/black-tie/jquery-ui.css" rel="Stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <title>USBug</title>
   </head>
@@ -112,170 +114,307 @@
 	    <p>But beside the CPU core itself, the microcontrollers implementing the ARM Cortex-M architecture also provide more sophisticated peripherals, compared to 8-bit units. Usually, a USB device is integrated in most mid-range devices, while USB host and Ethernet is only available on the higher-end devices.</p>
 	    <p>As a major semiconductor manufacturer, NXP has a large selection of ARM Cortex-M-based devices, among which the upper low-range <a href="http://www.nxp.com/products/microcontrollers/cortex_m0/lpc11u00/">LPC11Uxx</a> and mid-range <a href="http://www.nxp.com/products/microcontrollers/cortex_m3/lpc1300/">LPC13xx</a> devices integrates an USB device interface. But compared to other similar devices, these chips have a unique ROM-based MSC ("Mass Storage Class", aka. "USB memory stick") USB bootloader, which is the main reason for choosing them for the USBug board.</p>
 	    <p>The second reason to choose these USB-èenabled LPCxxxx for the USBug is that the devices using the LQFP48 package are pin-to-pin compatible, so here are all the CPUs that are compatible with the USBug board:</p>
-	    <table id="cpu" border="0" cellpadding="5" cellspacing="0">
-	      <col>
-	      <col>
-	      <col span="7">
-	      <tr>
-		<td colspan="2">Function</td>
-		<td>LPC11U23</td>
-		<td>LPC11U24</td>
-		<td>LPC1342</td>
-		<td>LPC1343</td>
-		<td>LPC1345</td>
-		<td>LPC1346</td>
-		<td>LPC1347</td>
-	      </tr>
-	      <tr>
-		<td rowspan="5" class="subsystem">Core</td>
-		<td>CPU</td>
-		<td colspan="2">ARM Cortex-M0 r0p0</td>
-		<td colspan="2">ARM Cortex-M3 r2p0</td>
-		<td colspan="3">ARM Cortex-M3 r2p1</td>
-	      </tr>
-	      <tr>
-		<td>Processor Speed</td>
-		<td colspan="2">50 MHz</td>
-		<td colspan="5">72 MHz</td>
-	      </tr>
-	      <tr>
-		<td>SysTick Timer</td>
-		<td colspan="7">1</td>
-	      </tr>
-	      <tr>
-		<td>Bit-banding</td>
-		<td colspan="2">-</td>
-		<td>yes</td>
-		<td>yes</td>
-		<td colspan="3">-</td>
-	      </tr>
-	      <tr>
-		<td>Memory Protection Unit</td>
-		<td colspan="2">-</td>
-		<td>yes</td>
-		<td>yes</td>
-		<td colspan="3">-</td>
-	      </tr>
-	      <tr>
-		<td rowspan="4" class="subsystem">Memory</td>
-		<td>Flash</td>
-		<td>24 kB</td>
-		<td>32 kB</td>
-		<td>16 kB</td>
-		<td>32 kB</td>
-		<td>32 kB</td>
-		<td>48 kB</td>
-		<td>64 kB</td>
-	      </tr>
-	      <tr>
-		<td>SRAM</td>
-		<td colspan="2">6/8+2 kB</td>
-		<td>4 kB</td>
-		<td>8 kB</td>
-		<td colspan="2">8+2 kB</td>
-		<td>8+2+2 kB</td>
-	      </tr>
-	      <tr>
-		<td>ROM</td>
-		<td colspan="7">16 kB</td>
-	      </tr>
-	      <tr>
-		<td>EEPROM</td>
-		<td>1 kB</td>
-		<td>2/4 kB</td>
-		<td colspan="2">-</td>
-		<td>2 kB</td>
-		<td colspan="2">4 kB</td>
-	      </tr>
-	      <tr>
-		<td rowspan="2" class="subsystem">GPIOs</td>
-		<td>GPIO Blocks</td>
-		<td colspan="2">2*32 pins</td>
-		<td colspan="2">4*12 pins</td>
-		<td colspan="3">2*32 pins</td>
-	      </tr>
-	      <tr>
-		<td>I/O Pins</td>
-		<td colspan="7">40</td>
-	      </tr>
-	      <tr>
-		<td class="subsystem">Clock</td>
-		<td>Wakeup from Deep-Sleep/Power-Down</td>
-		<td colspan="2">GPIO, WDT, USB</td>
-		<td colspan="2">GPIO, WDT Oscillator</td>
-		<td colspan="3">GPIO, WDT, USB</td>
-	      </tr>
-	      <tr>
-		<td rowspan="4" class="subsystem">Timers</td>
-		<td>32-bit Timer Blocks</td>
-		<td colspan="7">2</td>
-	      </tr>
-	      <tr>
-		<td>16-bit Timer Blocks</td>
-		<td colspan="7">2</td>
-	      </tr>
-	      <tr>
-		<td>Watchog Timer Blocks</td>
-		<td colspan="2">1 (Windowed)</td>
-		<td colspan="2">1</td>
-		<td colspan="3">1 (Windowed)</td>
-	      </tr>
-	      <tr>
-		<td>PWM Channels</td>
-		<td colspan="7">11</td>
-	      </tr>
-	      <tr>
-		<td rowspan="3" class="subsystem">Serial
-		  Interfaces</td>
-		<td>UART Blocks</td>
-		<td colspan="7">1</td>
-	      </tr>
-	      <tr>
-		<td>I2C Blocks</td>
-		<td colspan="7">1</td>
-	      </tr>
-	      <tr>
-		<td>SSP/SPI Blocks</td>
-		<td colspan="2">2</td>
-		<td colspan="2">1</td>
-		<td colspan="3">2</td>
-	      </tr>
-	      <tr>
-		<td rowspan="2" class="subsystem">USB
-		  Interface</td>
-		<td>USB Blocks</td>
-		<td colspan="7">1 USB 2.0 FS Device + PHY</td>
-	      </tr>
-	      <tr>
-		<td>USB ROM-based drivers</td>
-		<td colspan="2">HID, MSC, CDC</td>
-		<td colspan="2">HID, MSC</td>
-		<td colspan="3">HID, MSC, CDC, FDU</td>
-	      </tr>
-	      <tr>
-		<td class="subsystem">Analog</td>
-		<td>ADC Channels/Resolution</td>
-		<td colspan="4">8*10-bit, 400 kSamples/s</td>
-		<td colspan="3">8*12-bit, 500 kSamples/s</td>
-	      </tr>
-	      <tr>
-		<td class="subsystem">Debug</td>
-		<td>Debug Interfaces</td>
-		<td colspan="2">JTAG/SWD</td>
-		<td colspan="2">SWD</td>
-		<td colspan="3">JTAG/SWD</td>
-	      </tr>
-	      <tr>
-		<td class="subsystem">Packaging</td>
-		<td>Available Packages</td>
-		<td colspan="2">QFP64, QFP48, QFN33</td>
-		<td colspan="2">QFP48,QFN33</td>
-		<td colspan="3">QFP64, QFP48, QFN33</td>
-	      </tr>
+	    <table id="cpu" border="0" cellpadding="5"
+		   cellspacing="0">
+	      <thead>
+		<tr>
+		  <th>Group</th>
+		  <th>Function</th>
+		  <th>LPC11U23</th>
+		  <th>LPC11U24</th>
+		  <th>LPC1342</th>
+		  <th>LPC1343</th>
+		  <th>LPC1345</th>
+		  <th>LPC1346</th>
+		  <th>LPC1347</th>
+		</tr>
+	      </thead>
+	      <tbody>
+		<tr>
+		  <td>Analog</td>
+		  <td>ADC Channels/Resolution</td>
+		  <td>8*10-bit, 400 kSamples/s</td>
+		  <td>8*10-bit, 400 kSamples/s</td>
+		  <td>8*10-bit, 400 kSamples/s</td>
+		  <td>8*10-bit, 400 kSamples/s</td>
+		  <td>8*12-bit, 500 kSamples/s</td>
+		  <td>8*12-bit, 500 kSamples/s</td>
+		  <td>8*12-bit, 500 kSamples/s</td>
+		</tr>
+		<tr>
+		  <td>Clock</td>
+		  <td>Wakeup from Deep-Sleep/Power-Down</td>
+		  <td>GPIO, WDT, USB</td>
+		  <td>GPIO, WDT, USB</td>
+		  <td>GPIO, WDT Oscillator</td>
+		  <td>GPIO, WDT Oscillator</td>
+		  <td>GPIO, WDT, USB</td>
+		  <td>GPIO, WDT, USB</td>
+		  <td>GPIO, WDT, USB</td>
+		</tr>
+		<tr>
+		  <td>Core</td>
+		  <td>CPU</td>
+		  <td>ARM Cortex-M0 r0p0</td>
+		  <td>ARM Cortex-M0 r0p0</td>
+		  <td>ARM Cortex-M3 r2p0</td>
+		  <td>ARM Cortex-M3 r2p0</td>
+		  <td>ARM Cortex-M3 r2p1</td>
+		  <td>ARM Cortex-M3 r2p1</td>
+		  <td>ARM Cortex-M3 r2p1</td>
+		</tr>
+		<tr>
+		  <td>Core</td>
+		  <td>Processor Speed</td>
+		  <td>50 MHz</td>
+		  <td>50 MHz</td>
+		  <td>72 MHz</td>
+		  <td>72 MHz</td>
+		  <td>72 MHz</td>
+		  <td>72 MHz</td>
+		  <td>72 MHz</td>
+		</tr>
+		<tr>
+		  <td>Core</td>
+		  <td>SysTick Timer</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		</tr>
+		<tr>
+		  <td>Core</td>
+		  <td>Bit-banding</td>
+		  <td>yes</td>
+		  <td>yes</td>
+		  <td>yes</td>
+		  <td>yes</td>
+		  <td>yes</td>
+		  <td>yes</td>
+		  <td>yes</td>
+		</tr>
+		<tr>
+		  <td>Core</td>
+		  <td>Memory Protection Unit</td>
+		  <td>no</td>
+		  <td>no</td>
+		  <td>no</td>
+		  <td>no</td>
+		  <td>no</td>
+		  <td>no</td>
+		  <td>no</td>
+		</tr>
+		<tr>
+		  <td>Debug</td>
+		  <td>Debug Interfaces</td>
+		  <td>JTAG/SWD</td>
+		  <td>JTAG/SWD</td>
+		  <td>SWD</td>
+		  <td>SWD</td>
+		  <td>JTAG/SWD</td>
+		  <td>JTAG/SWD</td>
+		  <td>JTAG/SWD</td>
+		</tr>
+		<tr>
+		  <td>GPIOs</td>
+		  <td>GPIO Blocks</td>
+		  <td>2*32 pins</td>
+		  <td>2*32 pins</td>
+		  <td>4*12 pins</td>
+		  <td>4*12 pins</td>
+		  <td>2*32 pins</td>
+		  <td>2*32 pins</td>
+		  <td>2*32 pins</td>
+		</tr>
+		<tr>
+		  <td>GPIOs</td>
+		  <td>I/O Pins</td>
+		  <td>40</td>
+		  <td>40</td>
+		  <td>40</td>
+		  <td>40</td>
+		  <td>40</td>
+		  <td>40</td>
+		  <td>40</td>
+		</tr>
+		<tr>
+		  <td>Memory</td>
+		  <td>Flash</td>
+		  <td>24 kB</td>
+		  <td>32 kB</td>
+		  <td>16 kB</td>
+		  <td>32 kB</td>
+		  <td>32 kB</td>
+		  <td>48 kB</td>
+		  <td>64 kB</td>
+		</tr>
+		<tr>
+		  <td>Memory</td>
+		  <td>SRAM</td>
+		  <td>6/8+2 kB</td>
+		  <td>6/8+2 kB</td>
+		  <td>4 kB</td>
+		  <td>8 kB</td>
+		  <td>8+2 kB</td>
+		  <td>8+2 kB</td>
+		  <td>8+2+2 kB</td>
+		</tr>
+		<tr>
+		  <td>Memory</td>
+		  <td>ROM</td>
+		  <td>16 kB</td>
+		  <td>16 kB</td>
+		  <td>16 kB</td>
+		  <td>16 kB</td>
+		  <td>16 kB</td>
+		  <td>16 kB</td>
+		  <td>16 kB</td>
+		</tr>
+		<tr>
+		  <td>Memory</td>
+		  <td>EEPROM</td>
+		  <td>1 kB</td>
+		  <td>2/4 kB</td>
+		  <td>-</td>
+		  <td>-</td>
+		  <td>2 kB</td>
+		  <td>4 kB</td>
+		  <td>4 kB</td>
+		</tr>
+		<tr>
+		  <td>Packaging</td>
+		  <td>Available Packages</td>
+		  <td>QFP64, QFP48, QFN33</td>
+		  <td>QFP64, QFP48, QFN33</td>
+		  <td>QFP48,QFN33</td>
+		  <td>QFP48,QFN33</td>
+		  <td>QFP64, QFP48, QFN33</td>
+		  <td>QFP64, QFP48, QFN33</td>
+		  <td>QFP64, QFP48, QFN33</td>
+		</tr>
+		<tr>
+		  <td>Serial Interfaces</td>
+		  <td>UART Blocks</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		</tr>
+		<tr>
+		  <td>Serial Interfaces</td>
+		  <td>I2C Blocks</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1</td>
+		</tr>
+		<tr>
+		  <td>Serial Interfaces</td>
+		  <td>SSP/SPI Blocks</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		</tr>
+
+
+
+
+		<tr>
+		  <td>Timers</td>
+		  <td>32-bit Timer Blocks</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>Timers</td>
+		  <td>16-bit Timer Blocks</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>Timers</td>
+		  <td>Watchog Timer Blocks</td>
+		  <td>1 (Windowed)</td>
+		  <td>1 (Windowed)</td>
+		  <td>1</td>
+		  <td>1</td>
+		  <td>1 (Windowed)</td>
+		  <td>1 (Windowed)</td>
+		  <td>1 (Windowed)</td>
+		</tr>
+		<tr>
+		  <td>Timers</td>
+		  <td>PWM Channels</td>
+		  <td>11</td>
+		  <td>11</td>
+		  <td>11</td>
+		  <td>11</td>
+		  <td>11</td>
+		  <td>11</td>
+		  <td>11</td>
+		</tr>
+		<tr>
+		  <td>USB Interface</td>
+		  <td>USB Blocks</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		  <td>1 USB 2.0 FS Device + PHY</td>
+		</tr>
+		<tr>
+		  <td>USB Interface</td>
+		  <td>USB ROM-based drivers</td>
+		  <td>HID, MSC, CDC</td>
+		  <td>HID, MSC, CDC</td>
+		  <td>HID, MSC</td>
+		  <td>HID, MSC</td>
+		  <td>HID, MSC, CDC, FDU</td>
+		  <td>HID, MSC, CDC, FDU</td>
+		  <td>HID, MSC, CDC, FDU</td>
+		</tr>
+	      </tbody>
+	      <tfoot>
+		<tr>
+		  <th>Group</th>
+		  <th>Function</th>
+		  <th>LPC11U23</th>
+		  <th>LPC11U24</th>
+		  <th>LPC1342</th>
+		  <th>LPC1343</th>
+		  <th>LPC1345</th>
+		  <th>LPC1346</th>
+		  <th>LPC1347</th>
+		</tr>
+	      </tfoot>
 	    </table>
 	    <p>Note however that although they are pin-to-pin compatible and that they can be mounted using the same footprint, these devices may need different firmwares to run, as they integrate different IPs (Intellectual Properties) for the CPU core itself, but also for some peripherals (GPIOs, timers and USB device controller, among others).</p>
-          </div><h3><span class="ui-icon
-          ui-icon-triangle-1-e"></span><a href="#">FAQ</a></h3>
+          </div><h3><span></span><a href="#">FAQ</a></h3>
           <div>
       	    <div id="faq">
 	      <h4><a hef="#">• How do I get the schematic?</a></h4>
@@ -355,9 +494,9 @@
     </section>
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">USBug maintained by <a href="https://github.com/Squonk42">Squonk42</a></p>
+    <div id="footer_wrap">
+      <footer>
+        <p>USBug maintained by <a href="https://github.com/Squonk42">Squonk42</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
