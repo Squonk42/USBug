@@ -9,11 +9,13 @@ $(function() {
 	return false;
     }).next().hide();
     $('#cpu').dataTable({"bJQueryUI": true,
-			 "bLengthChange": false,
 			 "bPaginate": false,
 			 "bInfo": false,
 			 "fnDrawCallback": function( oSettings ) {
 			     $('#cpu tr:odd').css({backgroundColor: '#ccc'});
 			     $('#cpu tr:even').css({backgroundColor: 'transparent'});
-			 }});
+			 },
+			 "aoColumnDefs": [ 
+			     {"bSortable": false, "aTargets": [2, 3, 4, 5, 6, 7, 8]},
+			 ]});
 });
