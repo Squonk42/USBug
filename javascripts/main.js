@@ -29,6 +29,15 @@ $(function() {
 			     {"bSortable": false, "aTargets": [2, 3, 4, 5, 6, 7, 8]},
 			 ]});
 
+    // Initialize JQuery BOM DataTable
+    $('#bom').dataTable({"bJQueryUI": true,
+			 "bPaginate": false,
+			 "bInfo": false,
+			 "fnDrawCallback": function( oSettings ) {
+			     $('#bom tr:odd').css({backgroundColor: '#ccc'});
+			     $('#bom tr:even').css({backgroundColor: 'transparent'});
+			 }});
+
     // Initialize SeaDragon Deep Zoom Schematic
     viewer_schematic = new Seadragon.Viewer("schematic");
     viewer_schematic.openDzi("http://cache.zoom.it/content/8R4D.dzi",

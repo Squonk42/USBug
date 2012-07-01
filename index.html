@@ -89,6 +89,7 @@
 	    <h4>PCB</h4>
 	    <div id="board_top"></div>
 	    <div id="board_bottom"></div>
+	    <p>All <a href="https://github.com/Squonk42/USBug/tree/master/CAM">Gerber RS274D files</a> for PCB manufacturing are available from the Github repository.</p>
 	    <h4>3D Model</h4>
 	    <div id="model_3d">
 	      <iframe src="http://sketchup.google.com/3dwarehouse/mini?mid=144086a6a7cb82fd2ef54a87ac85e99d&etyp=sw&width=500&height=354"
@@ -106,6 +107,367 @@
 	    <a rel="fancybox" title="USBug Real Prototype" href="https://github.com/Squonk42/USBug/raw/master/images/USBug_Real.png">
 	      <img src="https://github.com/Squonk42/USBug/raw/master/images/USBug_Real_s.png" alt="USBug Real Prototype" width="140" height="140" />
 	    </a>
+	    <h4>Bill Of Material</h4>
+	    <table id="bom">
+	      <thead>
+		<tr>
+		  <th>Qty</th>
+		  <th>Value</th>
+		  <th>Device</th>
+		  <th>Parts</th>
+		  <th>Supplier</th>
+		  <th>Supplier Part Number</th>
+		  <th>Manufacturer</th>
+		  <th>Manufacturer Part Number</th>
+		  <th>Description</th>
+		</tr>
+	      </thead>
+	      <tbody>
+		<tr>
+		  <td>1</td>
+		  <td>1M</td>
+		  <td>RES_0603</td>
+		  <td>R12</td>
+		  <td>DigiKey</td>
+		  <td>P1.0MGCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ105V</td>
+		  <td>RES 1.0M OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>1k</td>
+		  <td>RES_0603</td>
+		  <td>R4, R9</td>
+		  <td>DigiKey</td>
+		  <td>P1.0KGCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ102V</td>
+		  <td>RES 1.0K OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>1k5</td>
+		  <td>RES_0603</td>
+		  <td>R7</td>
+		  <td>DigiKey</td>
+		  <td>P1.5KGCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ152V</td>
+		  <td>RES 1.5K OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>1u/16V</td>
+		  <td>CAP_0603</td>
+		  <td>C2</td>
+		  <td>DigiKey</td>
+		  <td>587-1241-1-ND</td>
+		  <td>Taiyo Yuden</td>
+		  <td>EMK107B7105KA-T</td>
+		  <td>CAP CER 1UF 16V 10% X7R 0603</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>2u2/10V</td>
+		  <td>CAP_0603</td>
+		  <td>C3</td>
+		  <td>DigiKey</td>
+		  <td>587-2983-1-ND</td>
+		  <td>Taiyo Yuden</td>
+		  <td>LMK107B7225KA-T</td>
+		  <td>CAP CER 2.2UF 10V 10% X7R 0603</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>10k</td>
+		  <td>RES_0603</td>
+		  <td>R3</td>
+		  <td>DigiKey</td>
+		  <td>P10KGCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ103V</td>
+		  <td>RES 10K OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>10n</td>
+		  <td>CAP_0603</td>
+		  <td>C7, C10</td>
+		  <td>DigiKey</td>
+		  <td>445-6855-1-ND</td>
+		  <td>TDK Corporation</td>
+		  <td>C1608X7R1C103K</td>
+		  <td>CAP CER 10000PF 16V 10% X7R 0603</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>10n/500V</td>
+		  <td>CAP_1206</td>
+		  <td>C8</td>
+		  <td>DigiKey</td>
+		  <td>709-1027-1-ND</td>
+		  <td>Johanson Dielectrics Inc</td>
+		  <td>501R18W103KV4E</td>
+		  <td>CAP CER 10000PF 500V X7R 1206</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>12MHz</td>
+		  <td>CRYSTAL_50X32</td>
+		  <td>Y1</td>
+		  <td>DigiKey</td>
+		  <td>644-1034-1-ND</td>
+		  <td>NDK</td>
+		  <td>NX5032GA-12.000000MHZ-LN-CD-1</td>
+		  <td>CRYSTAL 12.000000 MHZ 8PF SMD</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>18p/50V</td>
+		  <td>CAP_0603</td>
+		  <td>C4, C5</td>
+		  <td>DigiKey</td>
+		  <td>445-1272-1-ND</td>
+		  <td>TDK Corporation</td>
+		  <td>C1608C0G1H180J</td>
+		  <td>CAP CER 18PF 50V 5% NP0 0603</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>20K</td>
+		  <td>RES_0603</td>
+		  <td>R1, R2</td>
+		  <td>DigiKey</td>
+		  <td>P20KGCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ203V</td>
+		  <td>RES 20K OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>33R</td>
+		  <td>RES_0603</td>
+		  <td>R10, R11</td>
+		  <td>DigiKey</td>
+		  <td>P33GCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ330V</td>
+		  <td>RES 33 OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>100k</td>
+		  <td>RES_0603</td>
+		  <td>R5</td>
+		  <td>DigiKey</td>
+		  <td>P100KGCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ104V</td>
+		  <td>RES 100K OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>100n</td>
+		  <td>CAP_0603</td>
+		  <td>C1, C6, C9</td>
+		  <td>DigiKey</td>
+		  <td>478-1239-1-ND</td>
+		  <td>AVX Corporation</td>
+		  <td>0603YC104KAT2A</td>
+		  <td>CAP CER 0.1UF 16V 10% X7R 0603</td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>150R</td>
+		  <td>RES_0603</td>
+		  <td>R6, R8</td>
+		  <td>DigiKey</td>
+		  <td>P150GCT-ND</td>
+		  <td>Panasonic - ECG</td>
+		  <td>ERJ-3GEYJ151V</td>
+		  <td>RES 150 OHM 1/10W 5% 0603 SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>BAT54C</td>
+		  <td>BAT54C</td>
+		  <td>D1</td>
+		  <td>DigiKey</td>
+		  <td>BAT54C-FDICT-ND</td>
+		  <td>Diodes Inc</td>
+		  <td>BAT54C-7-F</td>
+		  <td>DIODE SCHOTTKY DUAL 30V SOT23-3</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>BLM18EG601SN1D</td>
+		  <td>FERRITE_BEAD0603</td>
+		  <td>L1</td>
+		  <td>DigiKey</td>
+		  <td>490-3994-1-ND</td>
+		  <td>Murata Electronics North America</td>
+		  <td>BLM18EG601SN1D</td>
+		  <td>FILTER CHIP 600 OHM 500MA 0603</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>BSS84-7-F</td>
+		  <td>BSS84-7-F</td>
+		  <td>Q1</td>
+		  <td>DigiKey</td>
+		  <td>BSS84-FDICT-ND</td>
+		  <td>Diodes Inc</td>
+		  <td>BSS84-7-F</td>
+		  <td>MOSFET P-CH 50V 130MA SOT23-3</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>FTSH-105-01-L-DH</td>
+		  <td>FTSH-105-01-L-DH</td>
+		  <td>P1</td>
+		  <td>DigiKey</td>
+		  <td>SAM1160-05-ND</td>
+		  <td>Samtec Inc</td>
+		  <td>FTSH-105-01-L-DH</td>
+		  <td>CONN HEADR 10POS DL .05" R/A SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>ISP</td>
+		  <td>SPST_SWITCH</td>
+		  <td>S2</td>
+		  <td>DigiKey</td>
+		  <td>679-2307-1-ND</td>
+		  <td>APEM Components, LLC</td>
+		  <td>ADTSM32RVTR</td>
+		  <td>SWITCH TACTILE SPST-NO 0.05A 12V</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>LEFT</td>
+		  <td>HEADER_1X20_LOCK</td>
+		  <td>P2</td>
+		  <td>DigiKey</td>
+		  <td>WM6420-ND</td>
+		  <td>Molex Connector Corporation</td>
+		  <td>22-28-4200</td>
+		  <td>CONN HEADER 20POS .100 VERT TIN</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>LPC1343FBD48</td>
+		  <td>LPC1343FBD48</td>
+		  <td>U1</td>
+		  <td>DigiKey</td>
+		  <td>568-4945-ND</td>
+		  <td>NXP Semiconductors</td>
+		  <td>LPC1343FBD48,151</td>
+		  <td>IC MCU 32BIT 32KB FLASH 48LQFP</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>MIC5225-3.3YM5</td>
+		  <td>MIC5225-3.3YM5</td>
+		  <td>VR1</td>
+		  <td>DigiKey</td>
+		  <td>576-2980-1-ND</td>
+		  <td>Micrel Inc</td>
+		  <td>MIC5225-3.3YM5 TR</td>
+		  <td>IC REG 3.3V SOT23-5</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>MINI-B USB</td>
+		  <td>MINI-B_USBUX60-MB-5ST</td>
+		  <td>J1</td>
+		  <td>DigiKey</td>
+		  <td>H2959CT-ND</td>
+		  <td>Hirose Electric Co Ltd</td>
+		  <td>UX60-MB-5ST</td>
+		  <td>CONN RECEPT MINI USB2.0 5POS</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>POWER</td>
+		  <td>LED_0805</td>
+		  <td>D2</td>
+		  <td>DigiKey</td>
+		  <td>350-2038-1-ND</td>
+		  <td>Dialight</td>
+		  <td>598-8110-107F</td>
+		  <td>LED TOPLED LED ALINGAP RED CLEAR 0805 SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>PRTR5V0U2X</td>
+		  <td>PRTR5V0U2X</td>
+		  <td>D5</td>
+		  <td>DigiKey</td>
+		  <td>568-4140-1-ND</td>
+		  <td>NXP Semiconductors</td>
+		  <td>PRTR5V0U2X,215</td>
+		  <td>DIODE ESD PROTECTION SOT143B</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>RESET</td>
+		  <td>SPST_SWITCH</td>
+		  <td>S1</td>
+		  <td>DigiKey</td>
+		  <td>679-2307-1-ND</td>
+		  <td>APEM Components, LLC</td>
+		  <td>ADTSM32RVTR</td>
+		  <td>SWITCH TACTILE SPST-NO 0.05A 12V</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>RIGHT</td>
+		  <td>HEADER_1X20_LOCK</td>
+		  <td>P3</td>
+		  <td>DigiKey</td>
+		  <td>WM6420-ND</td>
+		  <td>Molex Connector Corporation</td>
+		  <td>22-28-4200</td>
+		  <td>CONN HEADER 20POS .100 VERT TIN</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>USB</td>
+		  <td>LED_0805</td>
+		  <td>D3</td>
+		  <td>DigiKey</td>
+		  <td>350-2032-1-ND</td>
+		  <td>Dialight</td>
+		  <td>598-8140-107F</td>
+		  <td>LED ALINGAP YLW CLEAR 0805 SMD</td>
+		</tr>
+		<tr>
+		  <td>1</td>
+		  <td>USER</td>
+		  <td>LED_0805</td>
+		  <td>D4</td>
+  <td>DigiKey</td>
+		  <td>350-2035-1-ND</td>
+		  <td>Dialight</td>
+		  <td>598-8170-107F</td>
+		  <td>LED ALINGAP GREEN CLEAR 0805 SMD</td>
+		</tr>
+	      </tbody>
+	      <tfoot>
+		<tr>
+		  <th>Qty</th>
+		  <th>Value</th>
+		  <th>Device</th>
+		  <th>Parts</th>
+		  <th>Supplier</th>
+		  <th>Supplier Part Number</th>
+		  <th>Manufacturer</th>
+		  <th>Manufacturer Part Number</th>
+		  <th>Description</th>
+		</tr>
+	      </tfoot>
+	    </table>
 	    <h4>Datasheets</h4>
 	    <p><ul>
 		<li>NXP's LPC ARM Cortex M0/M3 32-bit processor:

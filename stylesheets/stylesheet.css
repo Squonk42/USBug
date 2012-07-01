@@ -198,7 +198,7 @@ JQueryUI customized Black-Tie style
     color: black;  /* for error messages, etc. */
 }
 
-#cpu tr td {
+#cpu tr td,#bom tr td {
   border-left: 1px solid;
   border-right: 1px solid;
   text-align: center;
