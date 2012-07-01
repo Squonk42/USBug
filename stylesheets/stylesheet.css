@@ -140,7 +140,8 @@ JQueryUI customized Black-Tie style
 }
 
 #progression {
-    border: 0;
+    border: none;
+    box-shadow: none;
     width: 887px;
     height:850px;
 }
@@ -165,6 +166,38 @@ JQueryUI customized Black-Tie style
     color: white;  /* for error messages, etc. */
 }
 
+#layout {
+    width: 500px;
+    height: 354px;
+    background-color: black;
+    border: 1px solid black;
+    color: black;  /* for error messages, etc. */
+}
+
+#model_3d {
+    width: 500px;
+    height: 354px;
+    background-color: white;
+    border: 1px solid black;
+    color: white;  /* for error messages, etc. */
+}
+
+#board_top {
+    width: 500px;
+    height: 200px;
+    background-color: black;
+    border: 1px solid black;
+    color: black;  /* for error messages, etc. */
+}
+
+#board_bottom {
+    width: 500px;
+    height: 200px;
+    background-color: black;
+    border: 1px solid black;
+    color: black;  /* for error messages, etc. */
+}
+
 #cpu tr td {
   border-left: 1px solid;
   border-right: 1px solid;
@@ -175,6 +208,10 @@ JQueryUI customized Black-Tie style
 
 #faq h4 {
   font-size: 16px;
+}
+
+a[rel=fancybox] img {
+    border: none;
 }
 
 /*******************************************************************************
@@ -273,7 +310,7 @@ strong {
 img {
   position: relative;
   margin: 0 auto;
-  max-width: 739px;
+//  max-width: 739px;
   padding: 5px;
   margin: 10px 0 10px 0;
   border: 1px solid #ebebeb;
