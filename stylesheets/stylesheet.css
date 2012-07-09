@@ -113,6 +113,14 @@ JQueryUI customized Black-Tie style
   background-image: url(http://ajax.microsoft.com/ajax/jquery.ui/1.8.5/themes/black-tie/images/ui-icons_ffffff_256x240.png);
 }
 
+#menu {
+  position: absolute;
+  z-index: 10;
+  bottom: -125px;
+  left: 0;
+  height: 150px;
+}
+
 #main_content {
   font-size: 12px;
   font-family: Arial, Helvetica, Sans;
