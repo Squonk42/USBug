@@ -212,7 +212,8 @@
 	<p>The USBug is a complete USB-based microcontroller development system in a very small footprint.</p>
 	<p>Programming is done via the USB port. No special programmer device is needed, only a standard “Mini-B” USB cable and a Windows/Linux PC or a Macintosh host computer with a USB port are required.</p>
 	<h3>Key Features:</h3>
-	<p><ul>
+	<p>
+	  <ul>
 	    <li>Fully Open-Source Hardware &amp; Software (CC-BY-SA, GPL)</li>
 	    <li>Drag &amp; Drop firmware: just use it as an USB Memory Stick!</li>
 	    <li>No Loader application, the bootloader resides in ROM (unereasable and does not require precious Flash space)</li>
@@ -239,6 +240,7 @@
 	    <li>Tiny size: 50 mm &times; 20 mm (2" &times; 0.8"), only 6.2 mm (0.244"") thick (w/o header pins)</li>
 	    <li>Available with pins for solderless breadboard</li>
 	    <li>Very low cost</li>
+	  </ul>
 	</p>
 
 	<!-- ACCORDION -->
@@ -621,7 +623,7 @@
 		  <td>USER</td>
 		  <td>LED_0805</td>
 		  <td>D4</td>
-  <td>DigiKey</td>
+		  <td>DigiKey</td>
 		  <td>350-2035-1-ND</td>
 		  <td>Dialight</td>
 		  <td>598-8170-107F</td>
@@ -643,7 +645,8 @@
 	      </tfoot>
 	    </table>
 	    <h4>Datasheets</h4>
-	    <p><ul>
+	    <p>
+	      <ul>
 		<li>NXP's LPC ARM Cortex M0/M3 32-bit processor:
 		  <ul>
 		    <li><a href="http://www.nxp.com/documents/data_sheet/LPC11U2X.pdf">LPC11U2x Datasheet</a>, <a href="http://www.nxp.com/documents/user_manual/UM10462.pdf">LPC11Uxx User Manual</a></li>
@@ -670,6 +673,7 @@
                 <li><a href="http://www.tdk.com/pdf/general_B11.pdf">TDK C Series General Applciation Surface Mount Multilayer Ceramic Chip Capacitors (SMD MLCCs)</a></li>
                 <li><a href="http://www.kemet.com/kemet/web/homepage/kechome.nsf/vapubfiles/KEM_C1003_C0G_SMD.pdf/$file/KEM_C1003_C0G_SMD.pdf">Kemet Surface Mount Multilayer Ceramic Chip Capacitors (SMD MLCCs) C0G Dielectric, 10VDC-200VDC (Commercial Grade)</a></li>
                 <li><a href="http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+AOA0001+ERJ3GEYJ105V+7+WW">Panasonic Thick Film Resistors</a></li>
+	      </ul>
 	    </p>
 	  </div>
 	  <h3>
@@ -978,84 +982,85 @@
 	      </tfoot>
 	    </table>
 	    <p>Note however that although they are pin-to-pin compatible and that they can be mounted using the same footprint, these devices may need different firmwares to run, as they integrate different IPs (Intellectual Properties) for the CPU core itself, but also for some peripherals (GPIOs, timers and USB device controller, among others).</p>
-          </div><h3><span></span><a href="#">FAQ</a></h3>
+          </div>
+	  <h3><span></span><a href="#">FAQ</a></h3>
           <div>
       	    <div id="faq">
 	      <h4><a hef="#">• How do I get the schematic?</a></h4>
 	      <div>
 		<p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
 	      </div>
-		<h4><a hef="#">• Are your boards RoHS compatible?</a></h4>
-		<div>
-		  <p>Yes, the USBug board are designed to use RoHS-compatible components. However, you should also use RoHS PCB and solder to be fully compliant.</p>
-		</div>
-		<h4><a hef="#">• What chip revision are your boards using?</a></h4>
-		<div>
-		  <p>The USBug board is designed to work with all NXP LPC LQFP48 packaged chips and do not depend on a specific chip revision. Although these chips are all pin-to-pin compatible, you should check for programming specificities and chip errata.</p>
-		</div>
-		<h4><a hef="#">• Are the design files available (schematic, layout, BOM and Gerber files)?</a></h4>
-		<div>
-		  <p>Yes! As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
-		</div>
-		<h4><a hef="#">• What is the warranty for your boards?</a></h4>
-		<div><p> AS A FULLY "OPEN HARDWARE" PROJECT, THERE IS NO WARRANTY FOR THE PRODUCT, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PRODUCT “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PRODUCT IS WITH YOU. SHOULD THE PRODUCT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.</p>
+	      <h4><a hef="#">• Are your boards RoHS compatible?</a></h4>
+	      <div>
+		<p>Yes, the USBug board are designed to use RoHS-compatible components. However, you should also use RoHS PCB and solder to be fully compliant.</p>
+	      </div>
+	      <h4><a hef="#">• What chip revision are your boards using?</a></h4>
+	      <div>
+		<p>The USBug board is designed to work with all NXP LPC LQFP48 packaged chips and do not depend on a specific chip revision. Although these chips are all pin-to-pin compatible, you should check for programming specificities and chip errata.</p>
+	      </div>
+	      <h4><a hef="#">• Are the design files available (schematic, layout, BOM and Gerber files)?</a></h4>
+	      <div>
+		<p>Yes! As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>.</p>
+	      </div>
+	      <h4><a hef="#">• What is the warranty for your boards?</a></h4>
+	      <div><p> AS A FULLY "OPEN HARDWARE" PROJECT, THERE IS NO WARRANTY FOR THE PRODUCT, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PRODUCT “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PRODUCT IS WITH YOU. SHOULD THE PRODUCT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.</p>
 		  <p>IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PRODUCT AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PRODUCT (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PRODUCT TO OPERATE WITH ANY OTHER PRODUCTS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-		</div>
-		<h4><a hef="#">• Where is the serial number?</a></h4>
-		<div>
-		  <p>The board itself does not have a serial number printed on it. However, the CPU provides both a Part ID and a Unique ID through either ISP ("In-circuit Serial Programming") or IAP ("In-Application Programming").</p>
-		</div>
-		<h4><a hef="#">• Do you have high resolution pictures of your products?</a></h4>
-		<div>
-		  <p>As a fully "Open Hardware" project, all design
+	      </div>
+	      <h4><a hef="#">• Where is the serial number?</a></h4>
+	      <div>
+		<p>The board itself does not have a serial number printed on it. However, the CPU provides both a Part ID and a Unique ID through either ISP ("In-circuit Serial Programming") or IAP ("In-Application Programming").</p>
+	      </div>
+	      <h4><a hef="#">• Do you have high resolution pictures of your products?</a></h4>
+	      <div>
+		<p>As a fully "Open Hardware" project, all design
 		  documents are made available in
 		  the <a href="https://github.com/Squonk42/USBug/tree/master/eagleUp">eagleUp USBug Github repository</a>, as well as corresponding Sketchup 3D models and Kerkithea render files.</p>
-		</div>
-		<h4><a hef="#">• Do you have a long-term commitment to production and availability of your boards?</a></h4>
-		<div>
-		  <p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>. You are thus able to take all required measures yourself in order to obtain the desired availability.</p>
-		</div>
-		<h4><a hef="#">• I cannot download the manuals or files in general. What to do?</a></h4>
-		<div>
-		  <p>Sorry, can't help with this general problem, try a proven working browser!</p>
-		</div>
-		<h4><a hef="#">• How to erase flash on devices when JTAG/SWD interface accidentally disabled or PLL programmed wrongly by application program that is already in flash?</a></h4>
-		<div>
-		  <p>It is possible to disable the JTAG/SWD interface on the LPC1xxx processors from software. It is also possible to program the PLL wrong so that the processor hangs. If this happens, it can be impossible to communicate with the processor via the JTAG/SWD interface. The reason for this is that the application program in flash starts executing immediately after reset. A JTAG/SWD pod normally takes some time to start connecting to the processor. During this initial connection phase, the application program inside the processor can disable the JTAG/SWD interface or hangs the PLL. The internal flash must be erased to solve this situation. Pull the ISP enable signal low when powering the board. This signal is named "PIO0_1" for LPC11xx/13xx.</p>
+	      </div>
+	      <h4><a hef="#">• Do you have a long-term commitment to production and availability of your boards?</a></h4>
+	      <div>
+		<p>As a fully "Open Hardware" project, all design documents are made available in the <a href="https://github.com/Squonk42/USBug">USBug Github repository</a>. You are thus able to take all required measures yourself in order to obtain the desired availability.</p>
+	      </div>
+	      <h4><a hef="#">• I cannot download the manuals or files in general. What to do?</a></h4>
+	      <div>
+		<p>Sorry, can't help with this general problem, try a proven working browser!</p>
+	      </div>
+	      <h4><a hef="#">• How to erase flash on devices when JTAG/SWD interface accidentally disabled or PLL programmed wrongly by application program that is already in flash?</a></h4>
+	      <div>
+		<p>It is possible to disable the JTAG/SWD interface on the LPC1xxx processors from software. It is also possible to program the PLL wrong so that the processor hangs. If this happens, it can be impossible to communicate with the processor via the JTAG/SWD interface. The reason for this is that the application program in flash starts executing immediately after reset. A JTAG/SWD pod normally takes some time to start connecting to the processor. During this initial connection phase, the application program inside the processor can disable the JTAG/SWD interface or hangs the PLL. The internal flash must be erased to solve this situation. Pull the ISP enable signal low when powering the board. This signal is named "PIO0_1" for LPC11xx/13xx.</p>
 		  <p>Immediately connect the processor UART/USB channel to the ISP program (for example FlashMagic). Erase flash from inside the ISP program. This procedure ensures that the application program in internal flash never executes on the processor after powerup. Also make sure to actually power cycle the processor before entering ISP mode. A warm reset does not always reset the PLL to a known state after reset. Therefore a cold reset is needed, i.e., cycle the power.</p>
-		</div>
-		<h4><a hef="#">• Are your boards EMC tested/certified?</a></h4>
-		<div>
-		  <p>USBug boards have not been EMC tested individually since these are components. EMC test (and CE marking) is only done on final products and the result very much depends on the environment into which it is integrated to.</p>
-		</div>
-		<h4><a hef="#">• Which free graphical libraries exist for NXP's processors?</a></h4>
-		<div>
-		  <p>microBuilder's <a href="http://www.microbuilder.eu/Projects/LPC1114ReferenceDesign/LPC1114CodeBase.aspx">LPC1114 Code Base software library</a> or <a href="http://www.microbuilder.eu/Projects/LPC1343ReferenceDesign/LPC1343CodeBase.aspx">LPC1343 Code Base software library</a> support all the main internal peripherals, and drivers for common hardware like I<sup>2</sup>C or SPI-based EEPROM. The code base includes complete C startup code and an easy to understand make file and linker script for building from the command-prompt on any OS (Yagarto 4.5.0 was used for builds), as well as project files for the open-source CodeLite C/C++ IDE and the commercial GCC-based Crossworks for ARM (useful for HW debugging).</p>
-		</div>
-		<h4><a hef="#">• What software development environment (IDE, compiler, debugger) is recommended for your boards?</a></h4>
-		<div>
-		  <p>USBug does not endorse or include a specific software development environment - sometimes also called IDE (Integrated Development Environment).</p>
-		  <p>We do however have good experience with the following products:</p>
-		  <ul>
-		    <li><a href="http://ics.nxp.com/lpcxpresso/"
-		    target="_blank">LPCXpresso IDE</a>. It is designed to operate with low-cost target boards including embedded JTAG/SWD interface on the development board. The LPCXpresso IDE is free and after registration it has a 128 kB limitation. Different upgrades exist to raise the code size limit or completely remove it. It is possible to use the embedded JTAG/SWD interface on the target boards as a JTAG/SWD interface for other boards than the LPCXpresso target boards by cutting some traces. This way, a JTAG/SWD interface hardware will cost only what an LPCXpresso board cost (around 20 EUR / 30 USD),. This is the most cost-effective solution to get a working JTAG/SWD programming/debugging interface.</li>
-		    <li><a href="http://www.keil.com/arm/mdk.asp" target="_blank">Keil - MDK/uVision</a>. There is an 'MDK-Lite (32KB code size limit) Edition' is available for <a href="https://www.keil.com/demo/eval/arm.htm" target="_blank">download</a>. Keil has a JTAG/SWD interface called <a href="/products/tools/tool_ulink2.php">ULINK2</a> which works great together with MDK/uVision.</li>
+	      </div>
+	      <h4><a hef="#">• Are your boards EMC tested/certified?</a></h4>
+	      <div>
+		<p>USBug boards have not been EMC tested individually since these are components. EMC test (and CE marking) is only done on final products and the result very much depends on the environment into which it is integrated to.</p>
+	      </div>
+	      <h4><a hef="#">• Which free graphical libraries exist for NXP's processors?</a></h4>
+	      <div>
+		<p>microBuilder's <a href="http://www.microbuilder.eu/Projects/LPC1114ReferenceDesign/LPC1114CodeBase.aspx">LPC1114 Code Base software library</a> or <a href="http://www.microbuilder.eu/Projects/LPC1343ReferenceDesign/LPC1343CodeBase.aspx">LPC1343 Code Base software library</a> support all the main internal peripherals, and drivers for common hardware like I<sup>2</sup>C or SPI-based EEPROM. The code base includes complete C startup code and an easy to understand make file and linker script for building from the command-prompt on any OS (Yagarto 4.5.0 was used for builds), as well as project files for the open-source CodeLite C/C++ IDE and the commercial GCC-based Crossworks for ARM (useful for HW debugging).</p>
+	      </div>
+	      <h4><a hef="#">• What software development environment (IDE, compiler, debugger) is recommended for your boards?</a></h4>
+	      <div>
+		<p>USBug does not endorse or include a specific software development environment - sometimes also called IDE (Integrated Development Environment).</p>
+		<p>We do however have good experience with the following products:</p>
+		<ul>
+		  <li><a href="http://ics.nxp.com/lpcxpresso/"
+			 target="_blank">LPCXpresso IDE</a>. It is designed to operate with low-cost target boards including embedded JTAG/SWD interface on the development board. The LPCXpresso IDE is free and after registration it has a 128 kB limitation. Different upgrades exist to raise the code size limit or completely remove it. It is possible to use the embedded JTAG/SWD interface on the target boards as a JTAG/SWD interface for other boards than the LPCXpresso target boards by cutting some traces. This way, a JTAG/SWD interface hardware will cost only what an LPCXpresso board cost (around 20 EUR / 30 USD),. This is the most cost-effective solution to get a working JTAG/SWD programming/debugging interface.</li>
+		  <li><a href="http://www.keil.com/arm/mdk.asp" target="_blank">Keil - MDK/uVision</a>. There is an 'MDK-Lite (32KB code size limit) Edition' is available for <a href="https://www.keil.com/demo/eval/arm.htm" target="_blank">download</a>. Keil has a JTAG/SWD interface called <a href="/products/tools/tool_ulink2.php">ULINK2</a> which works great together with MDK/uVision.</li>
 <li><a href="http://www.code-red-tech.com/" target="_blank">Code Red - Red Suite</a>. Code Red is the supplier of the LPCXpresso IDE (and licensed to NXP) and Red Suite is their own, more versatile version of the development environment. Code Red has a JTAG/SWD interface called <a href="/products/tools/tool_cr_redprobe.php">Red Probe+</a>. Compare versions <a href="http://www.code-red-tech.com/products.php#comparison" target="_blank">here.</a></li>
-		    <li><a href="http://www.rowley.co.uk/" target="_blank">Rowley - CrossWorks</a> with the JTAG/SWD interface <i>CrossConnect</i>. There is a fully-functional version for 30 days evaluation.</li>
-		    <li><a href="http://www.iar.com/" target="_blank">IAR - Embedded Workbench</a></li>
-		  </ul>
-		  <p>There are other products/(open source)projects than listed above. These have however not been tested with USBug. The ones in the list above we have good experience from using.</p>
-		  <p>You can also use your favorite editor for editing, GCC for compiling and GDB for debugging. This setup require experience and knowledge.</p>
-		  <p>Note that most of our sample applications have been created either for the LPCXpresso IDE or Keil uVision. It is not a very big job to port project settings from one development environment to another, but you are then on your own to provide free support for.</p>
-		  <p>As for debugging, the use of a JTAG/SWD interface and a debugger integrated with the development environment is recommended. This setup gives the most powerful tool to start your program development.</p>
-		  <p>Each software development environment listed above has accompanying JTAG/SWD interfaces. <a href="http://www.segger.com" target="_blank">Segger</a> has a very versatile JTAG/SWD interface called <a href="http://www.segger.com/jlink.html" target="_blank">J-LINK</a>, which works with many development environments. However, always check with the development supplier of your choice before purchase if J-LINK is supported. If you qualify for it (it should be the case if you are using it for hobby), you may check the relatively cheap <a href="http://shop-us.segger.com/J_Link_EDU_p/8.08.90.htm">J-Link EDU</a> offer.</p>
-		  <p>Most (cheaper) JTAG/SWD interfaces connect to the development PC via the USB interface. Only more expensive interfaces support Ethernet interfaces.</p>
-		</div>
+		  <li><a href="http://www.rowley.co.uk/" target="_blank">Rowley - CrossWorks</a> with the JTAG/SWD interface <i>CrossConnect</i>. There is a fully-functional version for 30 days evaluation.</li>
+		  <li><a href="http://www.iar.com/" target="_blank">IAR - Embedded Workbench</a></li>
+		</ul>
+		<p>There are other products/(open source)projects than listed above. These have however not been tested with USBug. The ones in the list above we have good experience from using.</p>
+		<p>You can also use your favorite editor for editing, GCC for compiling and GDB for debugging. This setup require experience and knowledge.</p>
+		<p>Note that most of our sample applications have been created either for the LPCXpresso IDE or Keil uVision. It is not a very big job to port project settings from one development environment to another, but you are then on your own to provide free support for.</p>
+		<p>As for debugging, the use of a JTAG/SWD interface and a debugger integrated with the development environment is recommended. This setup gives the most powerful tool to start your program development.</p>
+		<p>Each software development environment listed above has accompanying JTAG/SWD interfaces. <a href="http://www.segger.com" target="_blank">Segger</a> has a very versatile JTAG/SWD interface called <a href="http://www.segger.com/jlink.html" target="_blank">J-LINK</a>, which works with many development environments. However, always check with the development supplier of your choice before purchase if J-LINK is supported. If you qualify for it (it should be the case if you are using it for hobby), you may check the relatively cheap <a href="http://shop-us.segger.com/J_Link_EDU_p/8.08.90.htm">J-Link EDU</a> offer.</p>
+		<p>Most (cheaper) JTAG/SWD interfaces connect to the development PC via the USB interface. Only more expensive interfaces support Ethernet interfaces.</p>
+	      </div>
 	    </div>
 	  </div>
         </div>
+      </section>
     </div>
-    </section>
 
     <!-- FOOTER  -->
     <div id="footer_wrap">
