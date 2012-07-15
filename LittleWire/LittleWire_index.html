@@ -1,0 +1,265 @@
+<!-- 
+# Permission to use, copy, modify, and distribute this software for 
+# any purpose and without fee is hereby granted.
+#
+# THIS SOFTWARE IS PROVIDED 'AS IS' AND WITHOUT ANY EXPRESS OR
+# IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<HTML>
+<HEAD>
+<TITLE>SketchUp</TITLE>
+<STYLE>
+
+BODY {margin-top: 0px;}
+
+#title {
+  text-align: center;
+  font: bold 14px arial;
+  margin-bottom: 0px;
+}
+
+#date {
+  margin-top: 3px;
+  font: normal 10px arial;
+}
+
+#sketchUpObj {
+  width: 0px;
+}
+
+#sheet {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 3;
+  background-color: #FF00FF;
+  cursor: w-resize;
+  border: solid 1px #676767;
+}
+
+.sketchUpImage {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 2;
+  border: solid 1px #676767;
+}
+
+
+</STYLE>
+
+<SCRIPT>
+// list of image filenames
+var imageFileNameArray = new Array(
+ 'LittleWire_image0.jpg',
+ 'LittleWire_image1.jpg',
+ 'LittleWire_image2.jpg',
+ 'LittleWire_image3.jpg',
+ 'LittleWire_image4.jpg',
+ 'LittleWire_image5.jpg',
+ 'LittleWire_image6.jpg',
+ 'LittleWire_image7.jpg',
+ 'LittleWire_image8.jpg',
+ 'LittleWire_image9.jpg',
+ 'LittleWire_image10.jpg',
+ 'LittleWire_image11.jpg',
+ 'LittleWire_image12.jpg',
+ 'LittleWire_image13.jpg',
+ 'LittleWire_image14.jpg',
+ 'LittleWire_image15.jpg',
+ 'LittleWire_image16.jpg',
+ 'LittleWire_image17.jpg',
+ 'LittleWire_image18.jpg',
+ 'LittleWire_image19.jpg',
+ 'LittleWire_image20.jpg',
+ 'LittleWire_image21.jpg',
+ 'LittleWire_image22.jpg',
+ 'LittleWire_image23.jpg',
+ 'LittleWire_image24.jpg',
+ 'LittleWire_image25.jpg',
+ 'LittleWire_image26.jpg',
+ 'LittleWire_image27.jpg',
+ 'LittleWire_image28.jpg',
+ 'LittleWire_image29.jpg',
+ 'LittleWire_image30.jpg',
+ 'LittleWire_image31.jpg',
+ 'LittleWire_image32.jpg',
+ 'LittleWire_image33.jpg',
+ 'LittleWire_image34.jpg',
+ 'LittleWire_image35.jpg',
+  'LittleWire_image35.jpg');
+
+
+
+// list of html image elements
+var sketchUpImageArray = new Array();
+var currentPos = 0;
+var addToPos = 0;
+var imageCount = 0;
+
+var sketchUpObj = null;
+
+var mouseXOrig;
+var mouseX = 0;
+var mouseY = 0;
+var mouseIsDown = false;
+
+var title = null;
+
+function init() {
+  title = document.getElementById('title');
+  sketchUpObj = document.getElementById('sketchUpObj');
+  imageCount = imageFileNameArray.length;
+
+  // load up the imageArray with the sketchUp images
+  var left = sketchUpObj.offsetLeft - 400/2;
+  var top =  sketchUpObj.offsetTop;
+  for (i = 0; i < imageCount; i++) {
+    sketchUpImageArray[i] = new Image();
+    sketchUpImageArray[i].src = imageFileNameArray[i];
+    sketchUpImageArray[i].className = 'sketchUpImage';
+    sketchUpImageArray[i].style.left = left + "px";
+    sketchUpImageArray[i].style.top = top + "px";
+    hide(sketchUpImageArray[i]);
+    document.body.appendChild(sketchUpImageArray[i]);
+  }
+
+  // create a transparent sheet over the images so that the mouse
+  // events go it it
+  var sheet = document.createElement("DIV");
+  document.body.appendChild(sheet);
+  sheet.id = "sheet";
+  sheet.style.left = left + "px";
+  sheet.style.top = top + "px";
+  sheet.onmousemove = handleRotate;
+  sheet.onmousedown = handleMouseDown;
+  sheet.onmouseup = handleMouseUp;
+  sheet.onmouseout = handleMouseUp;
+  setOpacity(sheet, 0.0);
+
+  currentPos = imageCount-1
+  show(sketchUpImageArray[currentPos]);
+}
+
+
+/**
+ * When the mouse goes down, start rotating the image
+ *
+ * @param {Event} mousedown event
+ */
+function handleMouseDown(e) {
+  if (!e) { e = window.event; }
+  getMouseXY(e);
+  mouseXOrig = mouseX;
+  addToPos = 0;
+  mouseIsDown = true;
+}
+
+/**
+ * When the mouse goes up, stop rotating the image
+ *
+ * @param {Event} mouseup event
+ */
+function handleMouseUp(e) {
+  mouseIsDown = false;
+  currentPos += addToPos;
+}
+
+
+/**
+ * Divide the width of the html object by the number of images.
+ * As the mouse moves over the html object, show the appropriate image
+ * giving the illusion that the user is spinning the object.
+ *
+ * @param {Event} mousemove event
+ */
+function handleRotate(e) {
+  if (!e) { e = window.event; }
+
+  if (!mouseIsDown) {
+    return;
+  }
+
+  getMouseXY(e);
+
+  // STEP is how many pixels equals an image swap
+  var STEP = 10; 
+  var width = sketchUpObj.offsetWidth;
+  var delta = mouseX - mouseXOrig;
+
+  addToPos = Math.floor(delta/STEP);
+
+  //handle wrap around
+  var wrap = (currentPos + addToPos) % imageCount;
+  var newPos = (wrap < 0) ? imageCount + wrap : Math.abs(wrap);
+
+  //hide everyone except the image we are over
+  for (var i = 0; i < imageCount; i++) {
+    hide(sketchUpImageArray[i]);
+  }
+
+  show(sketchUpImageArray[newPos]);
+
+  return false;
+}
+
+/**
+ * Get the mouse position from the event e
+ * @param {Event} e mouse move event
+ */
+function getMouseXY(e) {
+  if (e.pageX) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+  } else {
+    mouseX = event.clientX + document.body.scrollLeft;
+    mouseY = event.clientY + document.body.scrollTop;
+  }  
+
+  if (mouseX < 0){mouseX = 0;}
+  if (mouseY < 0){mouseY = 0;} 
+}
+
+/**
+ * Get the left coordinate of the element
+ */
+function getLeft(element) {
+  var x = 0;
+  while (element) {
+    x += element.offsetLeft;
+    element = element.offsetParent;
+  }
+
+  return x;
+};
+
+
+function setOpacity(element, opacity) {
+  element.style.filter = "alpha(opacity=" + Math.round(opacity*100) + ")";
+  element.style.opacity = opacity;
+}
+
+/**
+ * Hides the HTML element.
+ * @param element HTMLElement the element we hide
+ */
+function hide(element) {
+  element.style.display = 'none';
+}
+
+
+/**
+ * show the HTML element.
+ * @param element HTMLElement the element we want to see.
+ */
+function show(element) {
+  element.style.display = 'block';
+}
+
+</SCRIPT>
+</HEAD>
+<BODY onload=init()>
+<CENTER><DIV id='sketchUpObj'></DIV></CENTER>
+</BODY>
+</HTML>
